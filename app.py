@@ -1,4 +1,26 @@
 import streamlit as st
+st.markdown("""
+    <style>
+    body {
+        background-color: #0e1117;
+    }
+    .stApp {
+        background: linear-gradient(to right, #141e30, #243b55);
+        color: white;
+    }
+    h1 {
+        text-align: center;
+    }
+    .stButton>button {
+        background-color: #ff4b4b;
+        color: white;
+        border-radius: 10px;
+        height: 3em;
+        width: 100%;
+        font-size: 18px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 import matplotlib.pyplot as plt
