@@ -32,7 +32,6 @@ st.markdown("""
 <h1 style='text-align:center;color:white;'>🛡️ Cyber Fraud Detection System</h1>
 </div>
 """, unsafe_allow_html=True)
-
 st.markdown("### Enter transaction details below 👇")
 st.write("")
 st.write("")
