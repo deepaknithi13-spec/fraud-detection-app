@@ -30,6 +30,8 @@ st.set_page_config(page_title="Cyber Fraud Detector", page_icon="🛡️", layou
 st.markdown("<h1 style='text-align: center; color: red;'>🛡️ Cyber Fraud Detection System</h1>", unsafe_allow_html=True)
 
 st.markdown("### Enter transaction details below 👇")
+st.write("")
+st.write("")
 
 # 📊 Sample Dataset (Training Data)
 data = {
@@ -49,9 +51,17 @@ model = LogisticRegression()
 model.fit(X, y)
 
 # 🎯 User Input
-amount = st.number_input("💰 Transaction Amount", min_value=0)
-time = st.number_input("⏰ Time (0–23)", min_value=0, max_value=23)
-location = st.selectbox("📍 Location Risk", ["Low", "High"])
+st.subheader("Enter Details")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    amount = st.number_input("Transaction Amount", min_value=0)
+
+with col2:
+    time = st.number_input("Time (0–23)", min_value=0, max_value=23)
+
+location = st.selectbox("Location Risk", ["Low", "High"])
 
 loc_val = 1 if location == "High" else 0
 
