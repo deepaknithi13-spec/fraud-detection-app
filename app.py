@@ -27,7 +27,11 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Cyber Fraud Detector", page_icon="🛡️", layout="centered")
 
-st.markdown("<h1 style='text-align: center; color: red;'>🛡️ Cyber Fraud Detection System</h1>", unsafe_allow_html=True)
+st.markdown("""
+<div style='background-color:#ff4b4b;padding:15px;border-radius:10px'>
+<h1 style='text-align:center;color:white;'>🛡️ Cyber Fraud Detection System</h1>
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("### Enter transaction details below 👇")
 st.write("")
@@ -102,3 +106,5 @@ if st.button("🚀 Predict"):
         file_name='result.csv',
         mime='text/csv'
     )
+    st.markdown("---")
+st.markdown("Cyber Storm Guard ⚡ | Cyber Security Project")
